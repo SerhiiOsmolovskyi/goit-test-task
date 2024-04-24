@@ -1,15 +1,21 @@
 .modalContainer {
-  /* display: flex; */
-  flex-direction: column;
-  justify-content: center;
   padding: 40px;
   width: 982px;
-  /* flex-direction: column;
-  align-items: flex-start; */
-  /* gap: 24px; */
+  position: relative;
   margin: 0 auto;
   border-radius: 20px;
   background: #fff;
+  border-radius: 20px;
+}
+
+.overlay {
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(17, 18, 19, 0.4);
 }
 
 .title {
@@ -19,6 +25,22 @@
   font-style: normal;
   font-weight: 600;
   line-height: 125%;
+}
+
+.closeIcon {
+  width: 32px;
+  height: 32px;
+  color: #101828;
+}
+
+.closeButton {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
 
 .info {
@@ -87,14 +109,10 @@ button {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 120px;
   background-color: transparent;
   border: none;
   padding: 0;
-  margin: 0;
   font-family: inherit;
-  font-size: inherit;
   cursor: pointer;
   color: #101828;
-  text-decoration: none;
 }

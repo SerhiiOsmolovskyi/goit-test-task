@@ -5,9 +5,9 @@ export default function BookForm() {
   return (
     <>
       <Formik
-        onSubmit={(values, { resetForm }) => {
-          console.log(values);
-          resetForm();
+        onSubmit={(values, { setSubmitting }) => {
+          setSubmitting(false);
+          window.location.reload();
         }}
         initialValues={{ name: "", email: "", bookingDate: "", comment: "" }}
         validationSchema={Yup.object({

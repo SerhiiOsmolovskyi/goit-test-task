@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCampers } from "../../redux/campers/operations";
 import {
@@ -9,13 +9,17 @@ import {
 import CamperList from "../../components/CamperList/CamperList";
 
 export default function CatalogPage() {
+  const [page, setPage] = useState(1);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const campers = useSelector(selectItems);
   const dispatch = useDispatch();
+  const onIncrementPege = () => {
+    setPage(page + 1);
+  };
   useEffect(() => {
-    dispatch(getAllCampers());
-  }, [dispatch]);
+    dispatch(getAllCampers({ page }));
+  }, [dispatch, page]);
   return (
     <section>
       {isLoading && <p>Loading...</p>}
@@ -23,6 +27,9 @@ export default function CatalogPage() {
       {Array.isArray(campers) && campers.length > 0 && (
         <CamperList campers={campers}></CamperList>
       )}
+      <button type="button" onClick={onIncrementPege}>
+        Load more
+      </button>
     </section>
   );
 }

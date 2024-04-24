@@ -1,11 +1,10 @@
-h2 {
+.title {
   color: #101828;
-  font-family: Inter;
   font-size: 24px;
-  font-style: normal;
   font-weight: 600;
   line-height: 125%;
   align-items: center;
+  margin: 0;
 }
 
 .listItem {
@@ -27,11 +26,6 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
-
-.title {
-  line-height: 1.25;
-  margin: 0;
 }
 
 .listItemImg {
@@ -68,11 +62,9 @@ h2 {
 
 .priceContainer {
   display: flex;
-  width: 158px;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  margin: 0;
 }
 
 .listItemHeader {
@@ -82,7 +74,10 @@ h2 {
 }
 
 .price {
-  margin: 0;
+  color: #101828;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
 }
 
 .favoriteButton {
