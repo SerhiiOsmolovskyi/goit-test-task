@@ -1,0 +1,163 @@
+h2 {
+  color: #101828;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  align-items: center;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  width: 888px;
+  border-radius: 20px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  background: #fff;
+}
+
+.listItemTop * {
+  margin: 0;
+}
+
+.itemContent {
+  width: 526px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  line-height: 1.25;
+  margin: 0;
+}
+
+.listItemImg {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.listItemTop {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info {
+  color: #101828;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.reviews {
+  color: #101828;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration-line: underline;
+}
+
+.priceContainer {
+  display: flex;
+  width: 158px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.listItemHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.price {
+  margin: 0;
+}
+
+.favoriteButton {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+}
+
+.favoriteIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.selectedFavoriteIcon {
+  width: 24px;
+  height: 24px;
+  color: #e44848;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+}
+
+.reviews {
+  margin: 0;
+}
+
+.description {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+
+.detailsList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.detailItem {
+  display: flex;
+  padding: 12px 18px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  background: #f2f4f7;
+  mix-blend-mode: multiply;
+  color: #101828;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125%;
+}
+
+.showMoreButton {
+  display: flex;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: flex-start;
+  width: fit-content;
+  gap: 10px;
+  border-radius: 200px;
+  background: #e44848;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+  font-family: inherit;
+}

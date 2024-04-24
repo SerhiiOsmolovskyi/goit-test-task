@@ -1,0 +1,100 @@
+.modalContainer {
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  width: 982px;
+  /* flex-direction: column;
+  align-items: flex-start; */
+  /* gap: 24px; */
+  margin: 0 auto;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.title {
+  color: #101828;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.reviews {
+  color: #101828;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration-line: underline;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.price {
+  color: #101828;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.imageContainer {
+  display: flex;
+  gap: 16px;
+  width: 950px;
+}
+
+.detailsImg {
+  width: 290px;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.description {
+  color: #475467;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.modalLink {
+  display: flex;
+  gap: 40px;
+}
+
+button {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  color: #101828;
+  text-decoration: none;
+}
