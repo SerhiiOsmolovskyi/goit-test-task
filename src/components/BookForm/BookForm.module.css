@@ -49,8 +49,13 @@
   font-weight: 400;
   line-height: 125%;
   border-style: none;
+  resize: none;
+  width: 364px;
 }
+
 .fieldTextArea {
+  width: 364px;
+  height: auto;
   background-color: #f7f7f7;
   color: rgba(16, 24, 40, 0.6);
   font-family: Inter;

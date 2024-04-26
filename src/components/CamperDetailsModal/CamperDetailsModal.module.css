@@ -108,6 +108,19 @@
 .modalLink {
   display: flex;
   gap: 40px;
+  margin-bottom: 68px;
+  margin-top: 28px;
+  position: relative;
+}
+
+.modalLink::after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(16, 24, 40, 0.2);
 }
 
 .modalBottomContainer {
@@ -181,4 +194,30 @@ button {
   cursor: pointer;
   color: #101828;
   line-height: 120%;
+}
+
+.raitingLine {
+  display: flex;
+  gap: 4px;
+}
+
+.modalLink button {
+  position: relative;
+}
+
+.modalLink button:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #e44848;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+}
+
+.modalLink button.activeLink:after {
+  transform: scaleX(1);
 }

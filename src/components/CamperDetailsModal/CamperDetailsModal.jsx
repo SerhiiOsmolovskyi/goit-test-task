@@ -106,6 +106,7 @@ export default function CamperDetailsModal({
                   onClick={() => {
                     setActiveTab("features");
                   }}
+                  className={activeTab === "features" ? styles.activeLink : ""}
                 >
                   Features
                 </button>
@@ -115,6 +116,7 @@ export default function CamperDetailsModal({
                   onClick={() => {
                     setActiveTab("reviews");
                   }}
+                  className={activeTab === "reviews" ? styles.activeLink : ""}
                 >
                   Reviews
                 </button>
@@ -134,7 +136,14 @@ export default function CamperDetailsModal({
                           </span>
                           <div className={styles.reviewRightContainer}>
                             <p>{reviewer_name}</p>
-                            <FaStar className={styles.starIcon} />
+                            <span className={styles.raitingLine}>
+                              {[...Array(reviewer_rating)].map((_, index) => (
+                                <FaStar
+                                  key={index}
+                                  className={styles.starIcon}
+                                />
+                              ))}
+                            </span>
                           </div>
                         </div>
                         <p className={styles.comment}>{comment}</p>

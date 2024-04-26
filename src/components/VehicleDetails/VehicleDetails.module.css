@@ -27,6 +27,7 @@
   font-size: 18px;
   font-weight: 500;
   line-height: 133.3%;
+  text-transform: capitalize;
 }
 
 .vehicleDetailsItem p {

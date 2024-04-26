@@ -28,7 +28,7 @@ export default function CatalogPage() {
       {Array.isArray(campers) && campers.length > 0 && (
         <CamperList campers={campers}></CamperList>
       )}
-      <button type="button" onClick={onIncrementPege}>
+      <button className={styles.button} type="button" onClick={onIncrementPege}>
         Load more
       </button>
     </section>
