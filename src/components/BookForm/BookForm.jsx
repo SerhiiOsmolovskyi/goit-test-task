@@ -1,5 +1,6 @@
 import { ErrorMessage, Field, Formik, Form } from "formik";
 import * as Yup from "yup";
+import styles from "./BookForm.module.css";
 
 export default function BookForm() {
   return (
@@ -17,24 +18,56 @@ export default function BookForm() {
           comment: Yup.string(),
         })}
       >
-        <Form>
-          <label htmlFor="name">
-            <Field name="name" type="text" />
-          </label>
-          <ErrorMessage name="name" component="div" />
-          <label htmlFor="email">
-            <Field name="email" type="email" />
-          </label>
-          <ErrorMessage name="email" component="div" />
-          <label htmlFor="bookingDate">
-            <Field name="bookingDate" type="date" />
-          </label>
-          <ErrorMessage name="bookingDate" component="div" />
-          <label htmlFor="comment">
-            <Field as="textarea" name="comment" type="text" />
-          </label>
-          <ErrorMessage name="comment" component="div" />
-          <button type="submit">Send</button>
+        <Form className={styles.bookFormContainer}>
+          <div>
+            <h3 className={styles.bookFormTitle}>Book your campervan now</h3>
+            <p className={styles.bookFormText}>
+              Stay connected! We are always ready to help you.
+            </p>
+          </div>
+
+          <div className={styles.fieldContainer}>
+            <label className={styles.label} htmlFor="name">
+              <Field
+                className={styles.field}
+                name="name"
+                type="text"
+                placeholder="Name"
+              />
+            </label>
+            <ErrorMessage name="name" component="div" />
+            <label className={styles.label} htmlFor="email">
+              <Field
+                className={styles.field}
+                name="email"
+                type="email"
+                placeholder="Email"
+              />
+            </label>
+            <ErrorMessage name="email" component="div" />
+            <label className={styles.label} htmlFor="bookingDate">
+              <Field
+                className={styles.field}
+                name="bookingDate"
+                type="date"
+                placeholder="Booking Date"
+              />
+            </label>
+            <ErrorMessage name="bookingDate" component="div" />
+            <label className={styles.label} htmlFor="comment">
+              <Field
+                className={styles.fieldTextArea}
+                as="textarea"
+                name="comment"
+                type="text"
+                placeholder="Comment"
+              />
+            </label>
+            <ErrorMessage name="comment" component="div" />
+          </div>
+          <button className={styles.sendButton} type="submit">
+            <p className={styles.sendButtonText}>Send</p>
+          </button>
         </Form>
       </Formik>
     </>

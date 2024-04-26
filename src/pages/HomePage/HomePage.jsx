@@ -1,7 +1,9 @@
+import styles from "./HomePage.module.css";
+
 export default function HomePage() {
   return (
-    <section>
-      <p>Welcome page</p>
+    <section className={styles.section}>
+      <p>Welcome Page</p>
     </section>
   );
 }

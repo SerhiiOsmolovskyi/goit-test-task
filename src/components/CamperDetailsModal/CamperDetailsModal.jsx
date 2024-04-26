@@ -80,7 +80,7 @@ export default function CamperDetailsModal({
           <h2 className={styles.title}>{name}</h2>
           <div className={styles.info}>
             <p className={styles.reviews}>
-              <FaStar className={styles.icon} />
+              <FaStar className={styles.starIcon} />
               {rating} ({reviews.length} Reviews)
             </p>
             <p>
@@ -88,7 +88,7 @@ export default function CamperDetailsModal({
               {location.split(", ").reverse().join(", ")}
             </p>
           </div>
-          <p className={styles.price}>&euro;{price}</p>
+          <p className={styles.price}>&euro;{price.toFixed(2)}</p>
           <ul className={styles.imageContainer}>
             {gallery.map((url, index) => {
               return (
@@ -121,17 +121,23 @@ export default function CamperDetailsModal({
               </li>
             </ul>
             {activeTab === "reviews" && (
-              <div>
-                <ul>
+              <div className={styles.reviewContainer}>
+                <ul className={styles.reviewLeftContainer}>
                   {reviews.map(
                     ({ reviewer_name, reviewer_rating, comment }, index) => (
                       <li key={index}>
-                        <div>
-                          <span>{reviewer_name[0]}</span>
-                          <p>{reviewer_name}</p>
-                          {/* Тут мають бути зірочки */}
+                        <div className={styles.reviewTopContainer}>
+                          <span className={styles.avatarContainer}>
+                            <p className={styles.avatarText}>
+                              {reviewer_name[0]}
+                            </p>
+                          </span>
+                          <div className={styles.reviewRightContainer}>
+                            <p>{reviewer_name}</p>
+                            <FaStar className={styles.starIcon} />
+                          </div>
                         </div>
-                        <p>{comment}</p>
+                        <p className={styles.comment}>{comment}</p>
                       </li>
                     )
                   )}
@@ -141,16 +147,19 @@ export default function CamperDetailsModal({
             )}
             {activeTab === "features" && (
               <>
-                <OptionsList camper={camper} />
-                <div>
-                  <VehicleDetails
-                    form={form}
-                    length={length}
-                    width={width}
-                    height={height}
-                    tank={tank}
-                    consumption={consumption}
-                  />
+                <div className={styles.modalBottomContainer}>
+                  <div className={styles.modalBottomContainerLeft}>
+                    <OptionsList camper={camper} />
+                    <VehicleDetails
+                      form={form}
+                      length={length}
+                      width={width}
+                      height={height}
+                      tank={tank}
+                      consumption={consumption}
+                    />
+                  </div>
+
                   <BookForm />
                 </div>
               </>

@@ -7,6 +7,7 @@ import {
   selectItems,
 } from "../../redux/campers/selectors";
 import CamperList from "../../components/CamperList/CamperList";
+import styles from "./CatalogPage.module.css";
 
 export default function CatalogPage() {
   const [page, setPage] = useState(1);
@@ -21,7 +22,7 @@ export default function CatalogPage() {
     dispatch(getAllCampers({ page }));
   }, [dispatch, page]);
   return (
-    <section>
+    <section className={styles.section}>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error</p>}
       {Array.isArray(campers) && campers.length > 0 && (

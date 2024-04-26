@@ -48,6 +48,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
 }
 
 .reviews {
@@ -58,12 +61,14 @@
   font-weight: 400;
   line-height: 150%;
   text-decoration-line: underline;
+  text-align: center;
 }
 
 .priceContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   gap: 10px;
 }
 
@@ -84,13 +89,33 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  width: 24px;
-  height: 24px;
+  line-height: 125%;
 }
 
 .favoriteIcon {
   width: 24px;
   height: 24px;
+}
+.starIcon {
+  width: 16px;
+  height: 16px;
+  color: #ffc531;
+  margin-right: 4px;
+}
+.geoIcon {
+  width: 16px;
+  height: 16px;
+  color: #101828;
+  margin-right: 4px;
+}
+
+.location {
+  color: #101828;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
 }
 
 .selectedFavoriteIcon {

@@ -97,7 +97,7 @@ export default function OptionsList({ camper, length }) {
     {
       prop: "hob",
       value: details.hob
-        ? `${details.hob} bed${details.hob > 1 && "s"}`
+        ? `${details.hob} Hob${details.hob > 1 && "s"}`
         : false,
       icon: <FaFireBurner />,
     },

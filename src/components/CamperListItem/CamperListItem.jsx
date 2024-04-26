@@ -95,11 +95,11 @@ export default function CamperListItem({
 
             <div className={styles.info}>
               <p className={styles.reviews}>
-                <FaStar className={styles.icon} />
+                <FaStar className={styles.starIcon} />
                 {rating} ({reviews.length} Reviews)
               </p>
-              <p>
-                <GrLocation className={styles.icon} />
+              <p className={styles.location}>
+                <GrLocation className={styles.geoIcon} />
                 {location.split(", ").reverse().join(", ")}
               </p>
             </div>

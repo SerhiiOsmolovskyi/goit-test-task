@@ -1,3 +1,5 @@
+import styles from "./VehicleDetails.module.css";
+
 export default function VehicleDetails({
   form,
   length,
@@ -11,30 +13,31 @@ export default function VehicleDetails({
   };
   return (
     <>
-      <div>
-        <h3>Vehicle details</h3>
-        <ul>
-          <li>
+      <div className={styles.vehicleDetailsContainer}>
+        <h3 className={styles.title}>Vehicle details</h3>
+
+        <ul className={styles.vehicleDetailsList}>
+          <li className={styles.vehicleDetailsItem}>
             <p>Form</p>
             <p>{form}</p>
           </li>
-          <li>
+          <li className={styles.vehicleDetailsItem}>
             <p>Length.</p>
             <p>{addSpace(length)}</p>
           </li>
-          <li>
+          <li className={styles.vehicleDetailsItem}>
             <p>Width</p>
             <p>{addSpace(width)}</p>
           </li>
-          <li>
+          <li className={styles.vehicleDetailsItem}>
             <p>Height</p>
             <p>{addSpace(height)}</p>
           </li>
-          <li>
+          <li className={styles.vehicleDetailsItem}>
             <p>Tank</p>
             <p>{addSpace(tank)}</p>
           </li>
-          <li>
+          <li className={styles.vehicleDetailsItem}>
             <p>Consumption</p>
             <p>{consumption}</p>
           </li>
