@@ -7,7 +7,7 @@ import { TbToolsKitchen2 } from "react-icons/tb";
 import { IoBedOutline } from "react-icons/io5";
 import { CgTv } from "react-icons/cg";
 import { LuDisc3 } from "react-icons/lu";
-import { HiOutlineRadio } from "react-icons/hi2";
+import { TbRadio } from "react-icons/tb";
 import { TbToiletPaper } from "react-icons/tb";
 import { CgSmartHomeRefrigerator } from "react-icons/cg";
 import { IoPeopleOutline } from "react-icons/io5";
@@ -82,7 +82,7 @@ export default function OptionsList({ camper, length }) {
     {
       prop: "radio",
       value: Boolean(details.radio) && `Radio`,
-      icon: <HiOutlineRadio />,
+      icon: <TbRadio />,
     },
     {
       prop: "toilet",

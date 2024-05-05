@@ -2,8 +2,10 @@ import { ErrorMessage, Field, Formik, Form } from "formik";
 import * as Yup from "yup";
 import styles from "./BookForm.module.css";
 import DatePicker from "react-datepicker";
+import { CiCalendar } from "react-icons/ci";
 
-import "react-datepicker/dist/react-datepicker.css";
+import "./reactDatePicker.css";
+import Button from "../Button/Button";
 
 export default function BookForm() {
   return (
@@ -49,20 +51,7 @@ export default function BookForm() {
             </label>
             <ErrorMessage name="email" component="div" />
             <label className={styles.label} htmlFor="bookingDate">
-              <Field
-                className={styles.field}
-                name="bookingDate"
-
-                // type="date"
-                // placeholder="Booking Date"
-                // id="bookingDate"
-                // onFocus={(event) => (event.target.placeholder = "")}
-                // onBlur={(event) => {
-                //   if (event.target.value === "") {
-                //     event.target.placeholder = "Booking date";
-                //   }
-                // }}
-              >
+              <Field className={styles.field} name="bookingDate">
                 {({ form, field }) => {
                   return (
                     <DatePicker
@@ -71,11 +60,15 @@ export default function BookForm() {
                       selected={field.value}
                       onChange={(date) => form.setFieldValue(field.name, date)}
                       placeholderText={"Booking date"}
+                      icon={<CiCalendar />}
+                      showIcon={true}
+                      calendarIconClassname={styles.calendarIcon}
                     />
                   );
                 }}
               </Field>
             </label>
+
             <ErrorMessage name="bookingDate" component="div" />
             <label className={styles.label} htmlFor="comment">
               <Field
@@ -88,9 +81,7 @@ export default function BookForm() {
             </label>
             <ErrorMessage name="comment" component="div" />
           </div>
-          <button className={styles.sendButton} type="submit">
-            <p className={styles.sendButtonText}>Send</p>
-          </button>
+          <Button type={"submit"} text={"Send"} />
         </Form>
       </Formik>
     </>

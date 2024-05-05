@@ -9,6 +9,7 @@ import { FaHeart } from "react-icons/fa";
 import { useState } from "react";
 import CamperDetailsModal from "../CamperDetailsModal/CamperDetailsModal";
 import OptionsList from "../OptionsList/OptionsList";
+import Button from "../Button/Button";
 
 export default function CamperListItem({
   _id,
@@ -108,12 +109,7 @@ export default function CamperListItem({
           <p className={styles.description}>{description}</p>
 
           <OptionsList camper={camper} length={6}></OptionsList>
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className={styles.showMoreButton}
-          >
-            Show more
-          </button>
+          <Button onClick={() => setIsModalOpen(true)} text={"Show more"} />
         </div>
         {isModalOpen && (
           <CamperDetailsModal

@@ -22,7 +22,7 @@ export default function VehicleDetails({
             <p>{form}</p>
           </li>
           <li className={styles.vehicleDetailsItem}>
-            <p>Length.</p>
+            <p>Length</p>
             <p>{addSpace(length)}</p>
           </li>
           <li className={styles.vehicleDetailsItem}>
