@@ -1,6 +1,9 @@
 import { ErrorMessage, Field, Formik, Form } from "formik";
 import * as Yup from "yup";
 import styles from "./BookForm.module.css";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 export default function BookForm() {
   return (
@@ -49,9 +52,28 @@ export default function BookForm() {
               <Field
                 className={styles.field}
                 name="bookingDate"
-                type="date"
-                placeholder="Booking Date"
-              />
+
+                // type="date"
+                // placeholder="Booking Date"
+                // id="bookingDate"
+                // onFocus={(event) => (event.target.placeholder = "")}
+                // onBlur={(event) => {
+                //   if (event.target.value === "") {
+                //     event.target.placeholder = "Booking date";
+                //   }
+                // }}
+              >
+                {({ form, field }) => {
+                  return (
+                    <DatePicker
+                      {...field}
+                      selected={field.value}
+                      onChange={(date) => form.setFieldValue(field.name, date)}
+                      placeholderText={"Booking date"}
+                    />
+                  );
+                }}
+              </Field>
             </label>
             <ErrorMessage name="bookingDate" component="div" />
             <label className={styles.label} htmlFor="comment">
