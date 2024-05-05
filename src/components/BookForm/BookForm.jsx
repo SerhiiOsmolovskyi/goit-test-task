@@ -66,6 +66,7 @@ export default function BookForm() {
                 {({ form, field }) => {
                   return (
                     <DatePicker
+                      className={styles.field}
                       {...field}
                       selected={field.value}
                       onChange={(date) => form.setFieldValue(field.name, date)}

@@ -50,6 +50,7 @@
 }
 
 .fieldTextArea {
+  padding: 18px;
   width: 364px;
   height: auto;
   background-color: #f7f7f7;
