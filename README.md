@@ -62,4 +62,4 @@ If a user navigates to a non-existent route, they will be redirected to the home
 
 ## Credits
 
-This project is created by [Your Name].
+This project is created by Serhii Osmolovskyi.
